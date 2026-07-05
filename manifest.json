@@ -1,0 +1,16 @@
+{
+  "name": "เก่งเลข ป.1 🌟 แบบฝึกหัดทบทวนคณิตศาสตร์แสนสนุก",
+  "short_name": "เก่งเลข ป.1",
+  "description": "แบบฝึกหัดทบทวนก่อนสอบกลางภาค วิชาคณิตศาสตร์สำหรับเด็ก ป.1 สะสมดาวรางวัล",
+  "start_url": "/grade1-math-quiz/",
+  "display": "standalone",
+  "background_color": "#fef3c7",
+  "theme_color": "#fbbf24",
+  "icons": [
+    {
+      "src": "/grade1-math-quiz/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

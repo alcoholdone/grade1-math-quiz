@@ -11,4 +11,4 @@
 :HL["/grade1-math-quiz/_next/static/media/a11fc3c3e4a74895-s.p.4420xne9zpxi_.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/grade1-math-quiz/_next/static/media/ab24015c41b3954b-s.p.3du3m7y1qagl5.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/grade1-math-quiz/_next/static/media/fa761a580272bc13-s.p.23yad7bsov_0s.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"KZ-GOa_J48Gsc995AWXBn"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"4g7o1znrgomD9cB7ZDEVh"}
