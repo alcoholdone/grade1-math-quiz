@@ -1,26 +1,105 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fef3c7; /* สีเหลืองอ่อนพาสเทล */
+  --foreground: #1e293b; /* สีเทาเข้มเกือบดำ */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-prompt), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  user-select: none;
+  -webkit-user-select: none;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* ปิดดีเลย์การสัมผัส 300ms และการซูมแบบ Double-Tap บน iPad เพื่อการกดเล่นที่รวดเร็วลื่นไหล */
+button, 
+a, 
+input, 
+select, 
+[role="button"],
+.interactive-slot {
+  touch-action: manipulation;
+}
+
+/* เอฟเฟกต์แอนิเมชันน่ารักๆ */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 15s linear infinite;
+}
+
+/* แอนิเมชันดุ๊กดิ๊กเตือนสติหรือเรียกร้องความสนใจ */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+.animate-wiggle {
+  animation: wiggle 0.5s ease-in-out infinite;
+}
+
+/* สไตล์สำหรับ Drop zone และ Drag item */
+.drag-item {
+  touch-action: none;
+  cursor: grab;
+}
+
+.drag-item:active {
+  cursor: grabbing;
+}
+
+/* ปรับแต่ง scrollbar ให้น่ารัก */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fef3c7; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fcd34d; 
+  border-radius: 10px;
+  border: 3px solid #fef3c7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fbbf24; 
+}
+
+/* คอนโทรลการตัดคำภาษาไทยไม่ให้ตกพยางค์ ช่วยให้ประโยคคณิตศาสตร์จัดแนวบาลานซ์สวยงาม */
+.thai-wrap {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  line-break: loose;
+}
+
+
+/* สไตล์การปรับขนาดสำหรับ iPad หน้าจอจำกัดความสูงในแนวนอน (Landscape Mode) */
+@media (max-height: 768px) {
+  main {
+    margin-top: 1rem !important;
+  }
+  .quiz-card {
+    min-height: auto !important;
+  }
 }
