@@ -5,6 +5,7 @@ const isProd = process.env.NODE_ENV === "production" || process.env.GITHUB_ACTIO
 const nextConfig: NextConfig = {
   output: "export",
   basePath: isProd ? "/grade1-math-quiz" : "",
+  trailingSlash: true, // บังคับให้ใช้ trailing slash เพื่อแก้ไขปัญหาการอ้างอิง path ใน GitHub Pages
   images: {
     unoptimized: true,
   },
