@@ -14,6 +14,12 @@ const promptFont = Prompt({
 export const metadata: Metadata = {
   title: "เก่งเลข ป.1 🌟 แบบฝึกหัดทบทวนคณิตศาสตร์แสนสนุก",
   description: "แบบฝึกหัดทบทวนก่อนสอบกลางภาค วิชาคณิตศาสตร์สำหรับเด็ก ป.1 สะสมดาวรางวัล",
+  manifest: "/grade1-math-quiz/manifest.json",
+  appleWebApp: {
+    capable: true,
+    title: "เก่งเลข ป.1",
+    statusBarStyle: "black-translucent",
+  },
 };
 
 export default function RootLayout({
